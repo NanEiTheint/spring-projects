@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Tutorial 3</title>
+</head>
+<body>
+	<h1>Requet Parameter</h1>
+	<p>	<a href="#" th:href="@{/demo/100}">Path Parameter</a></p><br />
+	<p><a href="#" th:href="@{/demo/query?name=jk&age=22}">Query Variable</a></p><br />
+	
+	<form action="#" th:action="@{/demo/query}" method="post">
+		<input type="text" name="name" placeholder="Enter your name" /><br />
+		<input type="number" name="age" placeholder="Enter your age" />
+		
+		<input type="submit" value="Send"/>
+	</form>
+	
+	<div th:if="${result != null}">
+		<h3>Result</h3>
+		<span th:text="${result}"></span>
+		
+	</div>
+</body>
+</html>
